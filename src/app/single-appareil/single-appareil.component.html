@@ -1,0 +1,21 @@
+<div [ngClass]="{'list-group-item' : true,
+              'list-group-item-success': status==='allumé',
+              'list-group-item-danger':  status==='éteint'}">
+    <div 
+        style="width: 20px;height: 20px;background-color: red;"
+        *ngIf = "status==='éteint'">       
+    </div>
+    <div 
+        style="width: 20px;height: 20px;background-color:green;"
+        *ngIf = "status==='allumé'">       
+    </div>
+    <h2>{{ name }}</h2>
+    <p>
+        statut : {{ status }} 
+    </p>
+    <button class="btn btn-success" *ngIf= "status ==='éteint'" (click)="onAllumer()">Allumer</button>
+    <button class="btn btn-danger" *ngIf= "status ==='allumé'" (click)="onEteindre()">Eteindre</button>
+
+</div>
+
+<a routerLink="/appareils">retour</a>

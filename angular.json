@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "fallapp": {
@@ -49,7 +49,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [  
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -145,6 +146,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fallapp"
-}
+    }
+  },
+  "defaultProject": "fallapp",
+  "cli": {
+    "analytics": "c4e378b8-07f9-423c-964a-7ab5ff34512b"
+  }
+  }
